@@ -15,7 +15,7 @@
 ### 5. 类
 
 ### 参考
-语法参考：[Programming Ruby](http://ruby-doc.com/docs/ProgrammingRuby/)  
+语法参考：[Programming Ruby: The Pragmatic Programmer's Guide](http://ruby-doc.com/docs/ProgrammingRuby/)  
 进阶读物：暂无  
 装B资源：[Ruby源代码](https://github.com/ruby/ruby)  
 Style Guide：[Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)， [Rails Style Guide](https://github.com/bbatsov/rails-style-guide)  
