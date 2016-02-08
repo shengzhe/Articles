@@ -18,7 +18,7 @@
 5. 其它
 
 ### 参考资料
-[Comparison of programming languages - wikipedia](https://en.wikipedia.org/wiki/Comparison_of_programming_languages)  
-[langref.org](http://langref.org)  
-[Comparison of popular and new languages - scriptol.com](http://www.scriptol.com/programming/choose.php)  
-[Hyperpolyglot.org](http://hyperpolyglot.org)  
+1. [Comparison of programming languages - wikipedia](https://en.wikipedia.org/wiki/Comparison_of_programming_languages)  
+2. [langref.org](http://langref.org)  
+3. [Comparison of popular and new languages - scriptol.com](http://www.scriptol.com/programming/choose.php)  
+4. [Hyperpolyglot.org](http://hyperpolyglot.org)  
