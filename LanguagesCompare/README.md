@@ -1,4 +1,5 @@
 # 几种编程语言的语法比较（Swift, Ruby, Javascript）
+**这是写给我自己的，需要慢慢补足的，不小心点进来的同学可以点叉咯**  
 
 ### 说明
 一直都觉得纠缠于语法，有点过于小儿科。  
@@ -10,9 +11,14 @@
 关于这个系列的文章，我决定只关注每个语言的`best practice`或者`style guide`中提倡遵循的语法，或者社区中提到的`convension`，尽量关注语言中`the good parts`，而忽略掉其余不好的部分。
 
 ### 结构
-1. 基本数据类型
-2. 特殊数据类型 
-3. 表达式与操作符
-4. 语句与控制
-5. 函数
-6. 其它
+1. 数据类型
+2. 表达式与操作符
+3. 语句与控制
+4. 函数
+5. 其它
+
+### 参考资料
+[Comparison of programming languages - wikipedia](https://en.wikipedia.org/wiki/Comparison_of_programming_languages)  
+[langref.org](http://langref.org)  
+[Comparison of popular and new languages - scriptol.com](http://www.scriptol.com/programming/choose.php)  
+[Hyperpolyglot.org](http://hyperpolyglot.org)  
