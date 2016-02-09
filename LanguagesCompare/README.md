@@ -18,6 +18,24 @@
 4. 函数
 5. 其它
 
+### 链接
+* 按语言  
+[Swift语法简述](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/Swift)  
+[Javascript语法简述](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/Javascript)  
+[Ruby语法简述](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/Ruby)  
+  
+* 按语法项目  
+[比较各语言的整数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/01-CompareInteger)  
+[比较各语言的浮点数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/02-CompareFloat)  
+[比较各语言的布尔值](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/03-CompareBool)  
+[比较各语言的字符串](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/04-CompareString)  
+[比较各语言的数组](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/11-CompareArray)  
+[比较各语言的键值对](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/12-CompareDictionary)  
+[比较各语言的打印语句](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/91-CompareLog)  
+[比较各语言的Exception Handling](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/92-CompareException)  
+[比较各语言的Assertion](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/93-CompareAssertion)  
+  
+
 ### 参考资料
 1. [Comparison of programming languages - wikipedia](https://en.wikipedia.org/wiki/Comparison_of_programming_languages)  
 2. [langref.org](http://langref.org)  
