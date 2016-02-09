@@ -18,8 +18,8 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
 > Swift always chooses `Double` (rather than `Float`) when inferring the type of floating-point numbers.
 
  ```swift
- let π = 3.14159
- let anotherPi = 3 + 0.14159
+ let π = 3.14159 // inferred as Double
+ let anotherPi = 3 + 0.14159 // inferred as Double
  ```
  
  swift中定义了`Float.infinity`和`Double.infinity`，然而并没有定义epsilon。**Style guide中也并没有关于Double、Float相等性(equality)的推荐用法**
@@ -42,10 +42,12 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
 > Swift’s copy-by-default String behavior... Behind the scenes, Swift’s compiler optimizes string usage so that actual copying takes place only when absolutely necessary.  
 
  ```swift
- let someString = "Some string literal value" 
- if someString.isEmpty {
+ let someString = "Some string literal value" // initialize, from string literal
+ if someString.isEmpty { // isEmpty
  }
  for character in someString.characters { // access Characters
+ }
+ if someString.characters.count { // characters.count
  }
  let message = "\(multiplier) times 2.5 is \(multiplier * 2.5)" // string interpolation
  ```
@@ -61,8 +63,8 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
      swift2.1版本，subscript仅能用来读取Character，不能用于写入Character。弱爆了！
      ```swift
      var greeting = "Guten Tag"
-     greeting[greeting.startIndex] // G
-     greeting[greeting.startIndex.advancedBy(7)] // a
+     greeting[greeting.startIndex] // accessing, through Index
+     greeting[greeting.startIndex.advancedBy(7)] // accessing, through Index
      greeting.insert("!", atIndex: greeting.endIndex) // insert
      greeting.removeAtIndex(greeting.endIndex.predecessor()) // remove
      ```
@@ -87,10 +89,12 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  不愧是强类型，但是运行时是否会因为插入不匹配的数据类型而崩溃呢？Bridge到Obj-C出现AnyObject时得额外注意这点  
  
  ```swift
- var someInts = [Int]()
- let threeDoubles = [Double](count: 3, repeatedValue: 0.0)
- var shoppingList = ["Eggs", "Milk"]
- if shoppingList.isEmpty {
+ var someInts = [Int]() // initialize, empty array
+ let threeDoubles = [Double](count: 3, repeatedValue: 0.0) // initialize
+ var shoppingList = ["Eggs", "Milk"] // initialize, with array literal
+ if shoppingList.isEmpty { // isEmpty
+ }
+ if shoppingList.count > 1 { // count
  }
  ```
  
@@ -98,9 +102,9 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  > You access and modify an array through its methods and properties, or by using subscript syntax.  
    
      ```swift
-     shoppingList.append("Flour")
-     shoppingList += ["Baking Powder"]
-     let firstItem = shoppingList[0]
+     shoppingList.append("Flour") // append
+     shoppingList += ["Baking Powder"] // append, with +
+     let firstItem = shoppingList[0] // accessing, throught subscript
      shoppingList[0] = "Six eggs" // replace, note: won't modify `firstItem`
      shoppingList[0...3] = ["Bananas", "Apples"] // replace range, note: with different size of items
      shoppingList.insert("Maple Syrup", atIndex: 0) // insert
@@ -131,7 +135,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
 > Tuples are particularly useful as the return values of functions.  
  
  ```swift
- let http404Error = (404, "Not Found")
+ let http404Error = (404, "Not Found") // tuple
  ```
 
 * Optionals  
@@ -146,7 +150,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
    
      ```swift
      let possibleNumber = "123"
-     if let actualNumber = Int(possibleNumber) {
+     if let actualNumber = Int(possibleNumber) { // optional, return value of func Int(String) -> Int?
      }
      ```
  
@@ -162,12 +166,12 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
 ### 2. 表达式与操作符
 * let定义常量：
 ```swift
-let π = 3.14159
+let π = 3.14159 // let
 ```
 
 * var定义变量：
 ```swift
-var friendlyWelcome = "Hello!"
+var friendlyWelcome = "Hello!" // var
 ```
 
 ### 3. 语句与控制
@@ -182,7 +186,7 @@ var friendlyWelcome = "Hello!"
 ### 7. 调试相关
 * 打印语句：
  ```swift
- print("log: " + str + \(a))
+ print("log: " + str + \(a)) // print
  ```
 
  [比较各语言的打印语句](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/91-CompareLog)  
@@ -193,7 +197,7 @@ var friendlyWelcome = "Hello!"
  
 * Assertion：
  ```swift
- assert(age >= 0, "A person's age cannot be less than zero")
+ assert(age >= 0, "A person's age cannot be less than zero") // assert
  ```
  
  [比较各语言的Assertion](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/93-CompareAssertion)  
