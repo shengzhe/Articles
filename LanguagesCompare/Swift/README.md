@@ -55,14 +55,16 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  
  * Accessing and Modifying a String  
    > Each String value has an associated index type, String.Index, which corresponds to the position of each Character in the string. 
+   You can use subscript syntax to access the Character at a particular String index.  
    
      **Index 的设计糟糕透顶，以后肯定会改**
+     swift2.1版本，subscript仅能用来读取Character，不能用于写入Character。弱爆了！
      ```swift
-     let greeting = "Guten Tag"
+     var greeting = "Guten Tag"
      greeting[greeting.startIndex] // G
      greeting[greeting.startIndex.advancedBy(7)] // a
-     greeting.insert("!", atIndex: greeting.endIndex)
-     greeting.removeAtIndex(greeting.endIndex.predecessor())
+     greeting.insert("!", atIndex: greeting.endIndex) // insert
+     greeting.removeAtIndex(greeting.endIndex.predecessor()) // remove
      ```
  * Compare Strings  
    > String and character equality is checked with the “equal to” operator (==) and the “not equal to” operator (!=)  
@@ -80,9 +82,45 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
 
 ##### 1.2 复杂数据类型
 * Array  
+> Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
+
+ 不愧是强类型，但是运行时是否会因为插入不匹配的数据类型而崩溃呢？Bridge到Obj-C出现AnyObject时得额外注意这点  
+ 
+ ```swift
+ var someInts = [Int]()
+ let threeDoubles = [Double](count: 3, repeatedValue: 0.0)
+ var shoppingList = ["Eggs", "Milk"]
+ if shoppingList.isEmpty {
+ }
+ ```
+ 
+ * Accessing and Modifying an Array  
+ > You access and modify an array through its methods and properties, or by using subscript syntax.  
+   
+     ```swift
+     shoppingList.append("Flour")
+     shoppingList += ["Baking Powder"]
+     let firstItem = shoppingList[0]
+     shoppingList[0] = "Six eggs" // replace, note: won't modify `firstItem`
+     shoppingList[0...3] = ["Bananas", "Apples"] // replace range, note: with different size of items
+     shoppingList.insert("Maple Syrup", atIndex: 0) // insert
+     shoppingList.removeAtIndex(0) // remove
+     ```
+ 
+ * Iterating Over an Array  
+     ```swift
+     for item in shoppingList { // for-in loop
+     }
+     for (index, value) in shoppingList.enumerate() { // enumerate() 
+     }
+     ```
  [比较各语言的数组](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/11-CompareArray)  
 
 * Dictionary  
+> Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
+
+ 不愧是强类型，但是运行时是否会因为插入不匹配的数据类型而崩溃呢？Bridge到Obj-C出现AnyObject时得额外注意这点  
+ 
  [比较各语言的键值对](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/12-CompareDictionary)  
 
 * Set  
