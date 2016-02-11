@@ -125,13 +125,46 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
 
 * Dictionary (value type, pass-by-value)  
 > Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
+> All of Swift’s basic types (such as String, Int, Double, and Bool) are hashable by default, and can be used as set value types or dictionary key types.  
 
  不愧是强类型，但是运行时是否会因为插入不匹配的数据类型而崩溃呢？Bridge到Obj-C出现AnyObject时得额外注意这点  
  
+ ```swift
+ var namesOfIntegers = [Int: String]() // initialize, empty array
+ var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"] // initialize, with dictionary literal
+ if airports.isEmpty { // isEmpty
+ }
+ if airports.count > 1 { // count
+ }
+ ```
+ 
+ * Accessing and Modifying a Dictionary    
+ > You access and modify an array through its methods and properties, or by using subscript syntax.  
+   
+     ```swift
+     airports["LHR"] = "London" // insert or replace, through subscript
+     if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") { // return old, if replace happens
+     }
+     if let airportName = airports["DUB"] { // accessing, through subscript
+     }
+     airports["APL"] = nil // remove
+     if let removedValue = airports.removeValueForKey("DUB") { // return old, when remove
+     }
+     ```
+ 
+ * Iterating Over a Dictionary  
+     ```swift
+     for (airportCode, airportName) in airports { // for-in loop
+     }
+     for airportCode in airports.keys { { // loop through keys, or airports.values to loop through values
+     }
+     let airportCodes = [String](airports.keys) // 这个必然需要改一改
+     ```
  [比较各语言的键值对](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/12-CompareDictionary)  
 
 * Set (value type, pass-by-value)  
 > Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
+> All of Swift’s basic types (such as String, Int, Double, and Bool) are hashable by default, and can be used as set value types or dictionary key types.  
  
  ```swift
  var letters = Set<Character>() // initialize, empty set
@@ -143,7 +176,6 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  ```
  * Accessing and Modifying a Set  
  > You access and modify a set through its methods and properties.  
- > All of Swift’s basic types (such as String, Int, Double, and Bool) are hashable by default, and can be used as set value types or dictionary key types.  
    
      ```swift
      favoriteGenres.insert("Jazz") // insert
