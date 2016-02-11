@@ -37,7 +37,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  ```
  [比较各语言的布尔值](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/03-CompareBool)  
 
-* String  
+* String (value type, pass-by-value)  
 > Swift’s String type is a value type. // String在Swift中是以Struct实现的  
 > Swift’s copy-by-default String behavior... Behind the scenes, Swift’s compiler optimizes string usage so that actual copying takes place only when absolutely necessary.  
 
@@ -83,8 +83,9 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  [比较各语言的字符串](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/04-CompareString)  
 
 ##### 1.2 复杂数据类型
-* Array  
+* Array (special value type, pass-by-value)  
 > Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
+> Copying only takes place when you perform an action that has the potential to modify the length of the array. Array是特殊的value type.  
 
  不愧是强类型，但是运行时是否会因为插入不匹配的数据类型而崩溃呢？Bridge到Obj-C出现AnyObject时得额外注意这点  
  
@@ -109,6 +110,8 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
      shoppingList[0...3] = ["Bananas", "Apples"] // replace range, note: with different size of items
      shoppingList.insert("Maple Syrup", atIndex: 0) // insert
      shoppingList.removeAtIndex(0) // remove
+     if shoppingList.contains("Milk") {
+     }
      ```
  
  * Iterating Over an Array  
@@ -120,14 +123,51 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
      ```
  [比较各语言的数组](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/11-CompareArray)  
 
-* Dictionary  
+* Dictionary (value type, pass-by-value)  
 > Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
 
  不愧是强类型，但是运行时是否会因为插入不匹配的数据类型而崩溃呢？Bridge到Obj-C出现AnyObject时得额外注意这点  
  
  [比较各语言的键值对](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/12-CompareDictionary)  
 
-* Set  
+* Set (value type, pass-by-value)  
+> Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
+ 
+ ```swift
+ var letters = Set<Character>() // initialize, empty set
+ var favoriteGenres: Set = ["Rock", "Classical", "Hip hop"] // initialize, with literal
+ if favoriteGenres.isEmpty { // isEmpty
+ }
+ if favoriteGenres.count > 1 { // count
+ }
+ ```
+ * Accessing and Modifying a Set  
+ > You access and modify a set through its methods and properties.  
+ > All of Swift’s basic types (such as String, Int, Double, and Bool) are hashable by default, and can be used as set value types or dictionary key types.  
+   
+     ```swift
+     favoriteGenres.insert("Jazz") // insert
+     favoriteGenres.remove("Rock") // remove
+     if favoriteGenres.contains("Funk") {
+     }
+     ```
+ 
+ * Iterating Over a Set  
+     ```swift
+     for genre in favoriteGenres { // for-in loop
+     }
+     for genre in favoriteGenres.sort() { // loop with sort
+     }
+     ```
+ 
+ * Fundamental Set Operations, Membership and Equality  
+     ```swift
+     a.intersect(b) // exclusiveOr(), union(), substract()
+     if a == b {}
+     if a.isSubsetOf(b) {} // a.isStrictSubsetOf(b)
+     if a.isSupersetOf(b) {} // a.isStrictSupersetOf(b)
+     if a.isDisjointWith(b) {}
+     ```
 
 ##### 1.2 特有数据类型
 * Tuples  
