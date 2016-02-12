@@ -6,7 +6,7 @@
 > A primitive (primitive value, primitive data type) is data that is not an object and has no methods. 
 > Most of the time, a primitive value is represented directly at the lowest level of the language implementation.
 
-* undefined  
+* [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)  
  > undefined is a property of the global object  
  
  **动态语言中，变量没有固定的*type*，数值的变化导致选用了不同的*type*。因此当变量未赋值时，其type为`undefined`。相较静态语言中，每个变量都有固定的*type*，数值的变化是基于*type*内的。**
@@ -17,7 +17,7 @@
  }
  ```
  
-* null  
+* [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)  
  > The value null is a literal (not a property of the global object like `undefined` can be).  
  > It is one of JavaScript's primitive values. (不是primitive type？)
  
@@ -30,8 +30,38 @@
 
  ```
 
-* Number  
-
+* [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)  
+ > Numbers in JavaScript are "double-precision 64-bit format IEEE 754 values".
+ > There's no such thing as an integer in JavaScript, In practice, integer values are treated as 32-bit ints, and some implementations even store it that way (该如何理解？)
+ > a built-in object [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) provides advanced mathematical functions and constants
+ 
+ ```javascript
+ "37" + 7 // "377", string + number
+ 37 + "7" // "377", string + number
+ "37" - 7 // 30, string -> number
+ parseInt("123", 10); // 123, string -> number
+ Math.sin(3.5); // Math function
+ Math.PI * (r + r); // Math constant
+ ```
+ 
+  * [NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)  
+   > NaN is a property of the global object.  
+   
+     ```javascript
+     parseInt("hello", 10); // NaN
+     NaN + 5; // NaN
+     isNaN(NaN); // true
+     ```
+  
+  * [Infinity](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+   > Infinity is a property of the global object  
+   > The initial value of Infinity is Number.POSITIVE_INFINITY  
+   
+     ```javascript
+     -1 / 0; // -Infinity
+     isFinite(1/0); // false
+     ```
+ 
  [比较各语言的整数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/01-CompareInteger)  
  [比较各语言的浮点数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/02-CompareFloat)  
 
