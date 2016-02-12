@@ -66,12 +66,20 @@
  [比较各语言的浮点数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/02-CompareFloat)  
 
 * [Bool](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  
- > `true` and `false` are keywords.  
+ > The Boolean type has two literal values: `true` and `false`. (是否说成keywords更好?)  
  > Any value can be converted to a boolean according to the following rules:  
  > 1. `false`, `0`, empty strings (""), `NaN`, `null`, and `undefined` all become false.  
  > 2. All other values become true.  
 
-* String  
+* [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)  
+ > Strings in JavaScript are sequences of `Unicode characters`. Each `Unicode character` is represented by either 1 or 2 code units (UTF-16).  
+ > strings like objects, they have methods as well that allow you to manipulate the string and access information about the string  
+ 
+ ```javascript
+ "hello".length; // length
+ "hello".charAt(0); // accessing
+ "hello, world".replace("hello", "goodbye"); // replace
+ ```
 
 * Symbol  
 
