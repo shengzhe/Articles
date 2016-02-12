@@ -27,7 +27,6 @@
  typeof undefined   // undefined
  null === undefined // false
  null  == undefined // true 
-
  ```
 
 * [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)  
@@ -39,6 +38,7 @@
  "37" + 7 // "377", string + number
  37 + "7" // "377", string + number
  "37" - 7 // 30, string -> number
+ 37 - "7" // 30, string -> number
  parseInt("123", 10); // 123, string -> number
  Math.sin(3.5); // Math function
  Math.PI * (r + r); // Math constant
@@ -65,7 +65,11 @@
  [比较各语言的整数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/01-CompareInteger)  
  [比较各语言的浮点数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/02-CompareFloat)  
 
-* Bool  
+* [Bool](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  
+ > `true` and `false` are keywords.  
+ > Any value can be converted to a boolean according to the following rules:  
+ > 1. `false`, `0`, empty strings (""), `NaN`, `null`, and `undefined` all become false.  
+ > 2. All other values become true.  
 
 * String  
 
