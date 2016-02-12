@@ -9,7 +9,7 @@
 * undefined  
  > undefined is a property of the global object  
  
- **动态语言中，变量没有固定的type，数值的变化导致选用了不同的type。因此当变量未赋值时，其类型为undefined。相较静态语言中，每个变量都有固定的type，数值的变化是基于type内的。**
+ **动态语言中，变量没有固定的*type*，数值的变化导致选用了不同的*type*。因此当变量未赋值时，其type为`undefined`。相较静态语言中，每个变量都有固定的*type*，数值的变化是基于*type*内的。**
  ```javascript
  if (x === undefined) { // Strict equality
  }
@@ -18,6 +18,17 @@
  ```
  
 * null  
+ > The value null is a literal (not a property of the global object like `undefined` can be).  
+ > It is one of JavaScript's primitive values. (不是primitive type？)
+ 
+ **为何不与`undefined`以相同方式实现呢？**
+ ```javascript
+ typeof null        // object (bug in ECMAScript, should be null)
+ typeof undefined   // undefined
+ null === undefined // false
+ null  == undefined // true 
+
+ ```
 
 * Number  
 
