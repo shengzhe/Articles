@@ -45,23 +45,8 @@
  ```
  
   * [NaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)  
-   > NaN is a property of the global object.  
-   
-     ```javascript
-     parseInt("hello", 10); // NaN
-     NaN + 5; // NaN
-     isNaN(NaN); // true
-     ```
-  
-  * [Infinity](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
-   > Infinity is a property of the global object  
-   > The initial value of Infinity is Number.POSITIVE_INFINITY  
-   
-     ```javascript
-     -1 / 0; // -Infinity
-     isFinite(1/0); // false
-     ```
- 
+  * [Infinity](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)  
+
  [比较各语言的整数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/01-CompareInteger)  
  [比较各语言的浮点数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/02-CompareFloat)  
 
@@ -86,6 +71,32 @@
 ##### 1.2 复杂数据类型
 
 * Object  
+ ```javascript
+ var obj = {};
+ var obj = {
+    "name": "Carrot",  
+    details: {
+     color: "orange",
+     size: 12
+    }
+ }
+ obj.details.color; // orange
+ obj["details"]["size"]; // 12
+ ```
+ 
+ **Object.prototype**
+ ```javascript
+ function Person(name, age) {
+   this.name = name;  
+    this.age = age;
+ }
+ var You = new Person("You", 24); 
+ ```
+ 
+ * Array  
+ * Function  
+ * Date  
+ * RegExp  
 
 ##### 1.3 特殊数据类型
 
