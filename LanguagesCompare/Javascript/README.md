@@ -70,7 +70,7 @@
 
 ##### 1.2 复杂数据类型
 
-* Object  
+* [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)  
  ```javascript
  var obj = {};
  var obj = {
@@ -84,7 +84,7 @@
  obj["details"]["size"]; // 12
  ```
  
- * Object.prototype  
+ * [Object.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype)  
    > All objects in JavaScript are descended from Object; all objects inherit methods and properties from Object.prototype  
    
      ```javascript
@@ -95,7 +95,7 @@
      var You = new Person("You", 24); 
      ```
    
- * Array  
+ * [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)  
    > Arrays in JavaScript are actually a special type of object.   
    > magic property `length` - one more than the *highest index* in the array.  
    
@@ -111,7 +111,20 @@
      });
      ```
 
- * Function  
+ * [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)  
+   > functions are the **core component** in understanding JavaScript   
+   
+     ```javascript
+     function avg() {
+       return sum / arguments.length; // arguments.length
+     }
+     avg.apply(null, [2, 3, 4, 5]); // apply, convert array to function parameters
+     (function() {
+     })();           // IIFE (Immediately Invoked Function Expressions), "hide" local variables 
+     var cnt = (function counter() {
+     })();           // IIFE with name, used for, e.g. recursion
+     ```
+
  * Date  
  * RegExp  
 
