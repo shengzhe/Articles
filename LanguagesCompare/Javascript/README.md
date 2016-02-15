@@ -76,24 +76,41 @@
  var obj = {
     "name": "Carrot",  
     details: {
-     color: "orange",
-     size: 12
+      color: "orange",
+      size: 12
     }
  }
  obj.details.color; // orange
  obj["details"]["size"]; // 12
  ```
  
- **Object.prototype**
- ```javascript
- function Person(name, age) {
-   this.name = name;  
-    this.age = age;
- }
- var You = new Person("You", 24); 
- ```
- 
+ * Object.prototype  
+   > All objects in JavaScript are descended from Object; all objects inherit methods and properties from Object.prototype  
+   
+     ```javascript
+     function Person(name, age) {
+       this.name = name;  
+       this.age = age;
+     }
+     var You = new Person("You", 24); 
+     ```
+   
  * Array  
+   > Arrays in JavaScript are actually a special type of object.   
+   > magic property `length` - one more than the *highest index* in the array.  
+   
+     ```javascript
+     var a = ["dog", "cat", "hen"]; // init, with array literal
+     a[100] = "fox"; // insert / replace
+     a.push("goat"); // append, see also: pop, shift, unshift
+     a.length; // 102, magic length property
+     typeof a[90]; // undefined, accessing
+     for (var i = 0; i < a.length; i++) { // for loop, bad, NOT preferred idiom
+     }
+     a.forEach(function(currentValue, index, array) { // forEach, good, NOT best choice
+     });
+     ```
+
  * Function  
  * Date  
  * RegExp  
