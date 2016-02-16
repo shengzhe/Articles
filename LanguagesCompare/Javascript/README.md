@@ -66,7 +66,13 @@
  "hello, world".replace("hello", "goodbye"); // replace
  ```
 
-* Symbol  
+* [Symbol (ES6)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)  
+ > A symbol is a unique and immutable data type and may be used as an identifier for object properties.  
+ 
+ ```javascript
+ var sym1 = Symbol();
+ var sym2 = Symbol("foo");
+ ```
 
 ##### 1.2 复杂数据类型
 
