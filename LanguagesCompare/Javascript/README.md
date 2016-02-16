@@ -131,8 +131,22 @@
      })();           // IIFE with name, used for, e.g. recursion
      ```
 
- * Date  
- * RegExp  
+ * [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)  
+   > Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC.  
+   
+     ```javascript
+     var today = new Date();
+     var birthday = new Date('1995-12-17T03:24:00');
+     var elapsed = today - birthday; // elapsed time in milliseconds
+     ```
+
+ * [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)  
+   > flags: g (global), i (ignore case), m (multiline), u (unicode), y (sticky)
+   
+     ```javascript
+     var reg = /(\w+)\s(\w+)/; // init with literal
+     var lines = text.split(/\r\n|\r|\n/); // apply
+     ```
 
 ##### 1.3 特殊数据类型
 
