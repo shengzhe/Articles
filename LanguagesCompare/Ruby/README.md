@@ -12,7 +12,13 @@
  
  ```ruby
  name = 'Bozhidar' # string literal
- 
+ %(<tr><td class="name">#{name}</td>) # single-line strings with interpolation and embedded double-quotes
+ "A".ord # ASCII, inverse of 65.chr
+ "Iterate".chars # characters
+ "Hi, this is " + "a concatenated string!" # concat
+ "Hello".scan(/./) {|letter| puts letter} # iterate (regexp in scan)
+ puts "number in this one." if "C3-P0" =~ /[0-9]/ # compare with regexp (=~)
+ "Hi".sub("i", "ello") # substitute/replace, or `gsub` for global substitute
  ```
  
 * Hashes  
