@@ -6,6 +6,18 @@
 > everything in Ruby is an object - Ruby中没有primitive data types
 
 ##### 1.2 复杂数据类型  
+* Numbers
+ > 
+ 
+ ```ruby
+ 10.times {|number| puts number} # loop, print 0 ~ 9
+ 1.upto(10) {|number| puts "#{number} Ruby loops"} # loop, 1 ~ 10
+ 5.step(50, 5) {|x| puts x} # loop, with step
+ 451.to_s # to_s, 3.1415926.to_s
+ 5.6.to_i # to_i
+ 5.to_f # to_f
+ ```
+ 
 * Strings   
  > (OptionA) Prefer single-quoted strings when you don't need string interpolation or special symbols.   
  > (OptionB) Prefer double-quotes unless your string literal contains " or escape characters you want to suppress.  
@@ -13,12 +25,12 @@
  ```ruby
  name = 'Bozhidar' # string literal
  %(<tr><td class="name">#{name}</td>) # single-line strings with interpolation and embedded double-quotes
- "A".ord # ASCII, inverse of 65.chr
- "Iterate".chars # characters
- "Hi, this is " + "a concatenated string!" # concat
- "Hello".scan(/./) {|letter| puts letter} # iterate (regexp in scan)
- puts "number in this one." if "C3-P0" =~ /[0-9]/ # compare with regexp (=~)
- "Hi".sub("i", "ello") # substitute/replace, or `gsub` for global substitute
+ 'C'.ord # ASCII, inverse of 67.chr
+ 'Iterate'.chars # characters
+ 'concatenated ' + 'string!' # concat, NOT preferred as interpolation
+ 'Hello'.scan(/./) {|letter| puts letter} # iterate (regexp in scan)
+ puts 'found number' if 'C3-P0' =~ /[0-9]/ # compare with regexp (=~)
+ 'Hi'.sub('i', "ello") # substitute/replace, or `tr` 
  ```
  
 * Hashes  
