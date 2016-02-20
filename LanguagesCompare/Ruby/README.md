@@ -6,8 +6,11 @@
 > everything in Ruby is an object - Ruby中没有primitive data types
 
 ##### 1.2 复杂数据类型  
-* Numbers
- > 
+* Numbers [Fixnum](http://ruby-doc.org/core-2.3.0/Fixnum.html) & [Bignum](http://ruby-doc.org/core-2.3.0/Bignum.html) & [Float](http://ruby-doc.org/core-2.3.0/Float.html)  
+ > Integers can be any length (up to a maximum determined by the amount of free memory on your system)  
+ > `Fixnum` holds Integer values that can be represented in a native machine word (minus 1 bit).  
+ > `Bignum` objects are created automatically when integer calculations would otherwise overflow a `Fixnum`  
+ > Float objects represent inexact real numbers using the native architecture's double-precision floating point representation.  
  
  ```ruby
  10.times {|number| puts number} # loop, print 0 ~ 9
@@ -18,7 +21,8 @@
  5.to_f # to_f
  ```
  
-* Strings   
+* [Strings](http://ruby-doc.org/core-2.3.0/String.html)   
+ > A String object holds and manipulates an arbitrary sequence of bytes, typically representing characters.
  > (OptionA) Prefer single-quoted strings when you don't need string interpolation or special symbols.   
  > (OptionB) Prefer double-quotes unless your string literal contains " or escape characters you want to suppress.  
  
@@ -33,8 +37,8 @@
  'Hi'.sub('i', "ello") # substitute/replace, or `tr` 
  ```
  
-* Hashes  
- > Hashes are like dictionaries, in a sense.  
+* [Hash](http://ruby-doc.org/core-2.3.0/Hash.html)  
+ > A Hash is a dictionary-like collection of unique keys and their values.   
  
  ```ruby
  hash = {} # init
@@ -50,8 +54,8 @@
  hash.delete_if {|key, value| value == 0} # conditional remove, {...} for single line block
  ```
  
-* Array  
- > Arrays are a lot like Hashes, except that the keys are always consecutive numbers, and always starts at 0.  
+* [Array](http://ruby-doc.org/core-2.3.0/Array.html)  
+ > Arrays are ordered, integer-indexed collections of any object.  
  
  ```ruby
  array2 = [] # init
