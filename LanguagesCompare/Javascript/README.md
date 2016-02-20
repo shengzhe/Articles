@@ -156,6 +156,24 @@
 
 ### 5. 原型
 
+### 6. 调试相关
+* 打印语句：
+ ```javascript
+ console.log(" ") // print
+ ```
+
+ [比较各语言的打印语句](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/91-CompareLog)  
+ 
+* Exception (try/throw/catch)：
+ 
+ [比较各语言的Exception Handling](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/92-CompareException)  
+ 
+* Assertion：
+ ```javascript
+ ```
+ 
+ [比较各语言的Assertion](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/93-CompareAssertion)  
+
 ### 参考
 语法参考：[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)  
 进阶读物：[《JavaScript: The Good Parts》](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742)， [《JavaScript语言精粹》](http://www.amazon.cn/JavaScript%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9-%E9%81%93%E6%A0%BC%E6%8B%89%E6%96%AF%E2%80%A2%E5%85%8B%E7%BD%97%E5%85%8B%E7%A6%8F%E5%BE%B7/dp/B0097CON2S)  
