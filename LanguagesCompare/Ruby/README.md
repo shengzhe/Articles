@@ -6,6 +6,15 @@
 > everything in Ruby is an object - Ruby中没有primitive data types
 
 ##### 1.2 复杂数据类型  
+* Strings   
+ > (OptionA) Prefer single-quoted strings when you don't need string interpolation or special symbols.   
+ > (OptionB) Prefer double-quotes unless your string literal contains " or escape characters you want to suppress.  
+ 
+ ```ruby
+ name = 'Bozhidar' # string literal
+ 
+ ```
+ 
 * Hashes  
  > Hashes are like dictionaries, in a sense.  
  
@@ -23,7 +32,7 @@
  hash.delete_if {|key, value| value == 0} # conditional remove, {...} for single line block
  ```
  
-* Array
+* Array  
  > Arrays are a lot like Hashes, except that the keys are always consecutive numbers, and always starts at 0.  
  
  ```ruby
@@ -56,6 +65,25 @@
 ### 4. 函数
 
 ### 5. 类
+
+### 6. 调试相关
+* 打印语句：
+ ```ruby
+ puts " " # print with newline
+ ```
+
+ [比较各语言的打印语句](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/91-CompareLog)  
+ 
+* Exception (try/throw/catch)：
+ 
+ [比较各语言的Exception Handling](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/92-CompareException)  
+ 
+* Assertion：
+ ```ruby
+ ```
+ 
+ [比较各语言的Assertion](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/93-CompareAssertion)  
+
 
 ### 参考
 语法参考：[Ruby Programming - wikibooks](https://en.wikibooks.org/wiki/Ruby_Programming)  
