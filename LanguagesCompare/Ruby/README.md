@@ -12,6 +12,7 @@
  ```ruby
  hash = {} # init
  hash = { one: 1, two: 2, three: 3 } # init (:one => 1 is bad)
+ hash.size # alias of length (Enumerable#count is bad for performance)
  hash[:test] = 0 # insert / replace
  hash.key?(:test) # check key
  hash.fetch(:test, 0) # introduce default values (hash[:test] || 0, custom logic is bad)
@@ -21,7 +22,20 @@
  hash.delete(:test) # remove
  hash.delete_if {|key, value| value == 0} # conditional remove, {...} for single line block
  ```
-
+ 
+* Array
+ > Arrays are a lot like Hashes, except that the keys are always consecutive numbers, and always starts at 0.  
+ 
+ ```ruby
+ array2 = [] # init
+ array = ["hello", "this", "is", "an", "array!"] # init
+ array << "haha" # push
+ array2 << array.pop until array.empty? # pop
+ array2 = array - ["haha"] # substract
+ array2 = array + ["hehe"] # union
+ string = array.join(" ") # array to string
+ ```
+ 
 ##### 1.3 其它数据类型  
 * Constants  
  > Constants start with capital letters.  
