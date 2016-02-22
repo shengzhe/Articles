@@ -202,7 +202,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
      ```
 
 ##### 1.2 特有数据类型
-* Tuples    
+* Tuples ([Source](https://github.com/apple/swift/blob/master/lib/AST/Type.cpp))  
 > Tuples group multiple values into a single compound value. The values within a tuple can be of any type and do not have to be of the same type as each other.  
 > Tuples are particularly useful as the return values of functions.  
  
