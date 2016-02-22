@@ -6,7 +6,7 @@
 > everything in Ruby is an object - Ruby中没有primitive data types
 
 ##### 1.2 复杂数据类型  
-* Numbers [Fixnum](http://ruby-doc.org/core-2.3.0/Fixnum.html) & [Bignum](http://ruby-doc.org/core-2.3.0/Bignum.html) & [Float](http://ruby-doc.org/core-2.3.0/Float.html)  
+* Numbers [Fixnum](http://ruby-doc.org/core-2.3.0/Fixnum.html) ([Source](https://github.com/ruby/ruby/blob/trunk/numeric.c)) & [Bignum](http://ruby-doc.org/core-2.3.0/Bignum.html) ([Source](https://github.com/ruby/ruby/blob/trunk/bignum.c)) & [Float](http://ruby-doc.org/core-2.3.0/Float.html) ([Source](https://github.com/ruby/ruby/blob/trunk/numeric.c))  
  > Integers can be any length (up to a maximum determined by the amount of free memory on your system)  
  > `Fixnum` holds Integer values that can be represented in a native machine word (minus 1 bit).  
  > `Bignum` objects are created automatically when integer calculations would otherwise overflow a `Fixnum`  
@@ -21,7 +21,7 @@
  5.to_f # to_f
  ```
  
-* [Strings](http://ruby-doc.org/core-2.3.0/String.html)   
+* [Strings](http://ruby-doc.org/core-2.3.0/String.html) ([Source](https://github.com/ruby/ruby/blob/trunk/string.c))  
  > A String object holds and manipulates an arbitrary sequence of bytes, typically representing characters.
  > (OptionA) Prefer single-quoted strings when you don't need string interpolation or special symbols.   
  > (OptionB) Prefer double-quotes unless your string literal contains " or escape characters you want to suppress.  
@@ -37,7 +37,7 @@
  'Hi'.sub('i', "ello") # substitute/replace, or `tr` 
  ```
  
-* [Hash](http://ruby-doc.org/core-2.3.0/Hash.html)  
+* [Hash](http://ruby-doc.org/core-2.3.0/Hash.html) ([Source](https://github.com/ruby/ruby/blob/trunk/hash.c))  
  > A Hash is a dictionary-like collection of unique keys and their values.   
  
  ```ruby
@@ -54,7 +54,7 @@
  hash.delete_if {|key, value| value == 0} # conditional remove, {...} for single line block
  ```
  
-* [Array](http://ruby-doc.org/core-2.3.0/Array.html)  
+* [Array](http://ruby-doc.org/core-2.3.0/Array.html) ([Source](https://github.com/ruby/ruby/blob/trunk/array.c))  
  > Arrays are ordered, integer-indexed collections of any object.  
  
  ```ruby
@@ -75,7 +75,7 @@
  SOME_CONST = 5 # define (SomeConst is bad)
  ```
  
-* Symbols  
+* [Symbols](http://ruby-doc.org/core-2.3.0/Symbol.html) ([Source](https://github.com/ruby/ruby/blob/trunk/symbol.c))  
  > Symbols are lightweight objects best used for comparisons and internal logic.  
 
  
