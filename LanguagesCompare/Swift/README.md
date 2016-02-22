@@ -4,7 +4,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
 ### 1. 数据类型
 
 ##### 1.1 基本数据类型
-* Int  
+* Int ([Source](https://github.com/apple/swift/blob/master/stdlib/public/core/FixedPoint.swift.gyb))  
 > Swift provides signed and unsigned integers in 8, 16, 32, and 64 bit forms.  
 > Use the `Int` type for all general-purpose integer constants and variables in your code, even if they are known to be non-negative.  
 
@@ -12,7 +12,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  `Int.min` ~ `Int.max` 在64位机器上的范围是 -2^63 ~ 2^63  
  [比较各语言的整数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/01-CompareInteger)  
 
-* Double、Float  
+* Double、Float ([Source](https://github.com/apple/swift/blob/master/stdlib/public/core/FloatingPoint.swift.gyb))  
 > `Double` represents a 64-bit floating-point number.  
 > `Float` represents a 32-bit floating-point number.  
 > Swift always chooses `Double` (rather than `Float`) when inferring the type of floating-point numbers.
@@ -26,7 +26,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  
  [比较各语言的浮点数](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/02-CompareFloat)  
 
-* Bool  
+* Bool ([Source](https://github.com/apple/swift/blob/master/stdlib/public/core/Bool.swift))  
 > Swift provides two Boolean constant values, `true` and `false`  
 > Swift’s type safety prevents non-Boolean values from being substituted for `Bool`.  
 
@@ -37,7 +37,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  ```
  [比较各语言的布尔值](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/03-CompareBool)  
 
-* String (value type, pass-by-value)  
+* String (value type, pass-by-value) ([Source](https://github.com/apple/swift/blob/master/stdlib/public/core/String.swift))  
 > Swift’s String type is a value type. // String在Swift中是以Struct实现的  
 > Swift’s copy-by-default String behavior... Behind the scenes, Swift’s compiler optimizes string usage so that actual copying takes place only when absolutely necessary.  
 
@@ -83,7 +83,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  [比较各语言的字符串](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/04-CompareString)  
 
 ##### 1.2 复杂数据类型
-* Array (special value type, pass-by-value)  
+* Array (special value type, pass-by-value) ([Source](https://github.com/apple/swift/blob/master/stdlib/public/core/Arrays.swift.gyb))  
 > Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
 > Copying only takes place when you perform an action that has the potential to modify the length of the array. Array是特殊的value type.  
 
@@ -123,7 +123,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
      ```
  [比较各语言的数组](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/11-CompareArray)  
 
-* Dictionary (value type, pass-by-value)  
+* Dictionary (value type, pass-by-value) ([Source](https://github.com/apple/swift/blob/master/stdlib/public/core/HashedCollections.swift.gyb))  
 > Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
 > All of Swift’s basic types (such as String, Int, Double, and Bool) are hashable by default, and can be used as set value types or dictionary key types.  
 
@@ -162,7 +162,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
      ```
  [比较各语言的键值对](https://github.com/shengzhe/Articles/tree/master/LanguagesCompare/CompareSyntax/12-CompareDictionary)  
 
-* Set (value type, pass-by-value)  
+* Set (value type, pass-by-value) ([Source](https://github.com/apple/swift/blob/master/stdlib/public/core/HashedCollections.swift.gyb))  
 > Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store.  
 > All of Swift’s basic types (such as String, Int, Double, and Bool) are hashable by default, and can be used as set value types or dictionary key types.  
  
@@ -202,7 +202,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
      ```
 
 ##### 1.2 特有数据类型
-* Tuples  
+* Tuples    
 > Tuples group multiple values into a single compound value. The values within a tuple can be of any type and do not have to be of the same type as each other.  
 > Tuples are particularly useful as the return values of functions.  
  
@@ -210,7 +210,7 @@ Swift号称是语法类似于脚本语言的、**系统级静态语言**。
  let http404Error = (404, "Not Found") // tuple
  ```
 
-* Optionals  
+* Optionals ([Source](https://github.com/apple/swift/blob/master/stdlib/public/core/Optional.swift))  
 > You use optionals in situations where a value may be absent.  
 
  ```swift
