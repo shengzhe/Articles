@@ -6,7 +6,7 @@
 > A primitive (primitive value, primitive data type) is data that is not an object and has no methods. 
 > Most of the time, a primitive value is represented directly at the lowest level of the language implementation.
 
-* [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) ([Source](https://github.com/v8/v8/blob/master/src/heap-symbols.h), [Source](https://github.com/v8/v8/blob/master/src/objects.h), [Source](https://github.com/v8/v8/blob/master/src/factory.h))  
+* [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) ([Source](https://github.com/v8/v8/blob/master/src/ast/ast-value-factory.h), [Source](https://github.com/v8/v8/blob/master/src/heap-symbols.h), [Source](https://github.com/v8/v8/blob/master/src/objects.h), [Source](https://github.com/v8/v8/blob/master/src/factory.h))  
  > undefined is a property of the global object  
  
  **动态语言中，变量没有固定的*type*，数值的变化导致选用了不同的*type*。因此当变量未赋值时，其type为`undefined`。相较静态语言中，每个变量都有固定的*type*，数值的变化是基于*type*内的。**
@@ -17,7 +17,7 @@
  }
  ```
  
-* [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) ([Source](https://github.com/v8/v8/blob/master/src/heap-symbols.h), [Source](https://github.com/v8/v8/blob/master/src/objects.h), [Source](https://github.com/v8/v8/blob/master/src/factory.h))  
+* [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) ([Source](https://github.com/v8/v8/blob/master/src/ast/ast-value-factory.h), [Source](https://github.com/v8/v8/blob/master/src/heap-symbols.h), [Source](https://github.com/v8/v8/blob/master/src/objects.h), [Source](https://github.com/v8/v8/blob/master/src/factory.h))  
  > The value null is a literal (not a property of the global object like `undefined` can be).  
  > It is one of JavaScript's primitive values. (不是primitive type？)
  
