@@ -6,7 +6,7 @@
 > A primitive (primitive value, primitive data type) is data that is not an object and has no methods. 
 > Most of the time, a primitive value is represented directly at the lowest level of the language implementation.
 
-* [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)  
+* [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) ([Source](https://github.com/v8/v8/blob/master/src/heap-symbols.h), [Source](https://github.com/v8/v8/blob/master/src/objects.h), [Source](https://github.com/v8/v8/blob/master/src/factory.h))  
  > undefined is a property of the global object  
  
  **动态语言中，变量没有固定的*type*，数值的变化导致选用了不同的*type*。因此当变量未赋值时，其type为`undefined`。相较静态语言中，每个变量都有固定的*type*，数值的变化是基于*type*内的。**
@@ -17,7 +17,7 @@
  }
  ```
  
-* [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)  
+* [null](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) ([Source](https://github.com/v8/v8/blob/master/src/heap-symbols.h), [Source](https://github.com/v8/v8/blob/master/src/objects.h), [Source](https://github.com/v8/v8/blob/master/src/factory.h))  
  > The value null is a literal (not a property of the global object like `undefined` can be).  
  > It is one of JavaScript's primitive values. (不是primitive type？)
  
@@ -177,4 +177,5 @@
 ### 参考
 语法参考：[A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)  
 进阶读物：[《JavaScript: The Good Parts》](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742)， [《JavaScript语言精粹》](http://www.amazon.cn/JavaScript%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9-%E9%81%93%E6%A0%BC%E6%8B%89%E6%96%AF%E2%80%A2%E5%85%8B%E7%BD%97%E5%85%8B%E7%A6%8F%E5%BE%B7/dp/B0097CON2S)  
+装B资源：[javascript源代码(chrome v8)](https://github.com/v8/v8)  
 Style Guide：[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)  
